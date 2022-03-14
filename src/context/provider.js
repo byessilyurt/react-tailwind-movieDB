@@ -1,9 +1,27 @@
-import { AppContext } from "./context";
+import AppContext from "./context";
 import { useState } from "react";
 const { Provider } = AppContext;
 
-export const AppProvider = (props) => {
-  const [message, setMessage] = useState("My name is context");
+// context provider
+const AppProvider = ({ children }) => {
+  const [state, setState] = useState({ favourites: [] });
 
-  return <Provider value={[message, setMessage]}>{props.children}</Provider>;
+  const addMovie = (movie) => {
+    setState({
+      favourites: [...state.favourites, movie],
+    });
+  };
+
+  const removeMovie = (movieId) => {
+    const newfavourites = state.favourites.filter(
+      (movie) => movie.id !== movieId
+    );
+    setState({ favourites: newfavourites });
+  };
+
+  return (
+    <Provider value={{ state, removeMovie, addMovie }}>{children}</Provider>
+  );
 };
+
+export default AppProvider;

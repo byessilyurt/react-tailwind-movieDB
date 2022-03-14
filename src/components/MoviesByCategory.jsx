@@ -6,6 +6,9 @@ import { createRecommendation } from "../helpers/index";
 import RecommendedMovie from "./RecommendedMovie";
 import SimilarToRecommended from "./SimilarToRecommended";
 import OtherMoviesInCategory from "./OtherMoviesInCategory";
+import HomeIcon from "./HomeIcon";
+import Drawer from "./Drawer";
+
 function MoviesByCategory(props) {
   const [movies, setMovies] = useState([]);
   const { categoryId } = useParams();
@@ -26,6 +29,8 @@ function MoviesByCategory(props) {
   const recommendedMovie = data.results[recommendendMovieIndex];
   return (
     <div>
+      <HomeIcon />
+      <Drawer />
       <RecommendedMovie movie={recommendedMovie} />
       <SimilarToRecommended movieId={recommendedMovie.id} />
       <OtherMoviesInCategory

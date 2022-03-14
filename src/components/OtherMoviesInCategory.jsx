@@ -1,11 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { IMAGE_API_URL } from "../api";
-import { AppContext } from "../context/context";
-import { useContext } from "react";
+import AppContext from "../context/context";
 function OtherMoviesInCategory({ categoryName, movies }) {
   const [otherMovies, setOtherMovies] = React.useState(movies);
-  const [message, setMessage] = useContext(AppContext);
-
+  const context = useContext(AppContext);
   const handleSearch = (search) => {
     setOtherMovies(
       movies?.filter((movie) =>
@@ -52,19 +50,29 @@ function OtherMoviesInCategory({ categoryName, movies }) {
                 </div>
               </h2>
               <p>{movie.overview}</p>
-              <div className="card-actions justify-end">
-                <div
-                  className="badge badge-outline cursor-pointer"
+              {context.state.favourites.find(
+                (favourite) => favourite.id === movie.id
+              ) ? (
+                <button
+                  key={movie.id}
+                  className="btn bg-tertiary text-primary border-primary hover:bg-primary-dark hover:text-white"
                   onClick={() => {
-                    setMessage(movie.original_title);
-                    console.log(message);
-                    console.log("addWatched fired");
+                    context.removeMovie(movie.id);
                   }}
                 >
-                  Add to watchlist
-                </div>
-                <div className="badge badge-outline">Products</div>
-              </div>
+                  Remove from favourites
+                </button>
+              ) : (
+                <button
+                  key={movie.id}
+                  className="btn bg-primary text-white hover:bg-primary-dark hover:text-white"
+                  onClick={() => {
+                    context.addMovie(movie);
+                  }}
+                >
+                  Add to favourites
+                </button>
+              )}
             </div>
           </div>
         ))}

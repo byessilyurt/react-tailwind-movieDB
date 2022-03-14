@@ -1,15 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import images from "../assets/index.js";
 import { useNavigate } from "react-router-dom";
+import AppContext from "../context/context";
 
 function MovieCategories({ categories }) {
+  const context = useContext(AppContext);
   const navigate = useNavigate();
   const handleClick = (categoryId, categoryName) => {
     navigate(`/movies/${categoryId}`, {
       state: { categoryName: categoryName },
     });
-
-    console.log("clicked ");
   };
   return (
     <div className="flex flex-wrap gap-8 justify-center">

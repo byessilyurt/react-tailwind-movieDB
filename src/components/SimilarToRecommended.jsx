@@ -70,7 +70,7 @@ function SimilarToRecommended({ movieId }) {
               alt={movie.title}
               className="hover:scale-105 ease-in-out duration-300 group-hover:opacity-60 px-2"
             />
-            <button className="absolute opacity-0 p-4 font-semibold border-2 border-blue-900 border-solid rounded-lg hover:bg-blue-900 hover:text-white hover:border-slate-100 group-hover:opacity-100 ease-in duration-300 top-2/4 left-2/4 translate-x-[-50%] translate-y-[-50%] text-blue-900 text-xs md:text-sm lg:text-base  ">
+            <button className="absolute opacity-0 p-4 font-semibold border-2 border-primary border-solid rounded-lg hover:bg-primary hover:text-white hover:border-primary group-hover:opacity-100 ease-in duration-300 top-2/4 left-2/4 translate-x-[-50%] translate-y-[-50%] text-primary text-xs md:text-sm lg:text-base  ">
               Show More
             </button>
           </div>
