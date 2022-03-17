@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e35b9a28.css",
+    "main.js": "/static/js/main.e9a3c2f3.js",
+    "static/media/savaş.png": "/static/media/savaş.1ab77df7622f7e5376c5.png",
+    "static/media/vahşibatı.png": "/static/media/vahşibatı.b1e70761355cfe35d6be.png",
+    "static/media/animasyon.png": "/static/media/animasyon.432f01767ad8b97dca21.png",
+    "static/media/korku.png": "/static/media/korku.becb5566e5c8c68bae13.png",
+    "static/media/belgesel.png": "/static/media/belgesel.fb3f2ad5c05ec8cc437e.png",
+    "static/media/aile.png": "/static/media/aile.b3c7ef639c2cd7ba9f26.png",
+    "static/media/komedi.png": "/static/media/komedi.e155b89f8642ceef697c.png",
+    "static/media/fantastik.png": "/static/media/fantastik.e18a4300a2492a64005a.png",
+    "static/media/müzik.png": "/static/media/müzik.9c31ff58eadd13955ac4.png",
+    "static/media/gizem.png": "/static/media/gizem.6399691e90b4198f6ada.png",
+    "static/media/macera.png": "/static/media/macera.cf67a8e69a67ab2d6340.png",
+    "static/media/TV.png": "/static/media/TV.73428cfa7c3f1c84ea23.png",
+    "static/media/bilimkurgu.png": "/static/media/bilimkurgu.ffbcfe7720e814303489.png",
+    "static/media/tarih.png": "/static/media/tarih.041b040ed4bbcb0c655d.png",
+    "static/media/suç.png": "/static/media/suç.9d767f45a44ab2ae2a8b.png",
+    "static/media/romantik.png": "/static/media/romantik.7c89506ce90ad4b115aa.png",
+    "static/media/aksiyon.jpeg": "/static/media/aksiyon.28183a572657ff02e7c7.jpeg",
+    "static/media/dram.png": "/static/media/dram.c44227d13fea63844673.png",
+    "static/media/gerilim.png": "/static/media/gerilim.bb185482602c458ceaef.png",
+    "index.html": "/index.html",
+    "main.e35b9a28.css.map": "/static/css/main.e35b9a28.css.map",
+    "main.e9a3c2f3.js.map": "/static/js/main.e9a3c2f3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e35b9a28.css",
+    "static/js/main.e9a3c2f3.js"
+  ]
+}
